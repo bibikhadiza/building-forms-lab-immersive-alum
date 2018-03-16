@@ -4,7 +4,9 @@ class Bands extends Component {
   render(){
     return (
       <div>
-        band input
+        <ul>
+          {this.props.store.getState().bands.map( e => <li>{e}</li>)}
+        </ul>
       </div>
     );
   }
